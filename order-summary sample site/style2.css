@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*CSS Variables*/
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#fff;
+    width: min(350px, 85vw);
+    border: 2px;
+    border-radius: 25px;
+    border-color: white;
+    overflow: hidden;
+}
+
+.card img{
+    max-width: 100%;
+}
+
+.card-content{
+    padding:2rem;
+    padding-top: 0%;
+}
+
+article {
+    text-align: center;
+    margin-block: 1.2rem;
+}
+
+article h1 {
+    color: var(--dark-blue);
+    margin-bottom: 0.85rem;
+}
+
+article p {
+    color: var(--desaturated-blue);
+}
+
+.flex{
+    display: flex;
+    margin-bottom: 1.2rem;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    padding: 0.8rem;
+    border-radius: 20px;
+}
+
+.flex a {
+    margin-left: auto;
+    color: var(--bright-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.flex img{
+    margin-right: 1rem;
+}
+
+.flex p {
+    color: var(--desaturated-blue);
+}
+
+.annual-plan h2{
+    font-size: 1rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: 900;
+    border: none;
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: var(--bright-blue);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0, 18px, 47px, 0 var(--desaturated-blue);
+}
+
+.white-btn {
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media(max-width: 450px){
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+}

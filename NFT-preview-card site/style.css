@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/*RESET*/
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    color: white;
+}
+
+.card{
+    width: 300px;
+    /*border: 2px solid white;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 1.2rem;
+}
+
+.image-container{
+    /* border: 1px solid red; */
+    position: relative;
+    border-radius: 8px;
+    background-color: hsl(215, 51%, 70%);
+    overflow:hidden;
+    margin-bottom: 1rem;
+}
+
+.image-container:hover {
+    background-color: hsl(215, 51%, 70%);
+    /* opacity: 0.8; */
+
+}
+
+
+.eq-img  {
+    transform: scale(1.1);/*1.1 means 110%*/
+    transition: 2s;
+}
+
+
+
+.icon-eye{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /*this move the eye-icon to the back of this diamond image*/
+    /* transition: 2s; */
+    
+}
+
+.image-container:hover .icon-eye {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.image-container:hover .eq-img{
+    opacity: 0.5;
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+h1:hover{
+    color: hsl(215, 51%, 70%);
+    cursor:pointer;
+}
+p{
+    color: hsl(215, 51%, 70%);
+    margin-bottom: 1rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex p {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.flex p:nth-child(1) {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.card-info{
+    border-bottom: 1px solid hsl(215, 51%, 70%);
+    margin-bottom: 1rem;
+}
+
+.creator-info {
+    display: flex;
+   justify-content:space-between; 
+   align-items: center;
+    gap:0.1rem;
+    width: 230px;
+}
+.creator-info img {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.creator-info span{
+    color: white;
+    cursor: pointer;
+}
+
+.creator-info span:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+/*media quaery*/
+@media (max-width: 650px) {
+    .card {
+        width:80%;
+    }
+    h1{
+        font-size: 1.1rem;
+    }
+}
